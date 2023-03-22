@@ -4,7 +4,8 @@ function CharacterComp({ character, handleDeleteCharacter, index }) {
      
     //Function to generate bgColor by taking a input character
     const getBgColor = (char) =>{
-    const charCode = char.charCodeAt(0);
+    // taking bg color same for the alphabet either its uppercase or lowercase 
+    const charCode = char.toLowerCase().charCodeAt(0);
     // Use the ASCII code to generate hex colorCode
     const colorCode = "#" + ((charCode * 123456) % 16777215).toString(16);
     return colorCode;
