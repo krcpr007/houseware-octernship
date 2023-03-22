@@ -31,7 +31,7 @@ function Screen2({ inputString }) {
   }
   return (
     <>
-      <section className='bg-rose-200 h-fit'>
+      <section>
         <div className='px-3 lg:px-5 flex flex-wrap '>
           {[...inputString]?.map((char, i) => {
             return <CharacterComp character={char} key={i} index={i} handleDeleteCharacter={handleDeleteCharacter} />
