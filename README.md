@@ -1,3 +1,65 @@
+## Instructions to Run this web app localhost/local system
+
+// Go to the app directory by below command 
+```
+ cd app
+ ```
+// Install all the dependencies by below command
+ ```
+  npm install
+```
+// Start the React app by below command 
+```
+  npm run start 
+```
+
+### Libraries and devDependencies used in this web app
+ Note -> For styling Tailwind css and for alert react-toastify are used 
+```
+"dependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.8.0",
+    "react-router-dom": "^6.9.0",
+    "react-scripts": "5.0.1",
+    "react-toastify": "^9.1.1",
+    "web-vitals": "^2.1.4"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.2.7"
+  }
+```
+## About me (Project submitter)
+<p> I am Rajan kumar, currently pursuing B.tech from the National institute of technology Patna (NIT Patna). I have experience in full stack/MERN stack web development with strong hands on projects (see my portfolio website attached below). I am proficient with development, also done freelancing projects. I love to optimize web vitals, server side rendering, also worked with Bundlers, and multi-threading in javascript. Now I need real-world corporate practical experience.
+I am attaching my resume and portfolio along with a GitHub link for you to look over.
+
+Resume link: https://drive.google.com/file/u/0/d/1mk62t09UnlHCtr5EL1lSXUDwq1FHSSSO/view
+
+Portfolio: https://krcpr007.vercel.app
+
+GitHub: https://github.com/krcpr007/</p>
+<ul>
+<li>Name: Rajan kumar</li>
+<li>College: NIT Patna </li>
+<li>Portfolio: <a href="https://krcpr007.vercel.app">Portfolio</a></li>
+<li>GitHub: <a href="https://github.com/krcpr007">krcpr007</a></li>
+<li>Resume: <a href="https://drive.google.com/file/d/1mk62t09UnlHCtr5EL1lSXUDwq1FHSSSO/view">Resume</a></li>
+</ul>
+
+## Assumptions
+<ul>
+<li>Lowercase and Uppercase character treated as same for only background color. Means background color of same alphabet will be same. For example, background color of 'A' and background color of 'a' will be same </li>
+<li>Space as a character</li>
+</ul>
+
+
+### Small Bug 
+<p>For generating the background color of character card I have written a function named as 'getBgColor' which is taking a character as input and generating a hex color code. The generated hex color code is same for same character but bug is that the generated hex color code by viewing the color is similar to the each other for some character, remember similar but not same. It means by viewing you can see that generated color is similar looking but their hex code is different </p>
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
