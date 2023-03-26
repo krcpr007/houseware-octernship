@@ -5,9 +5,8 @@ import CharacterComp from '../Components/CharacterComp'
 
 function Screen2({ inputString }) {
   const [result, setResult] = useState(inputString) // for displaying the result
-  const [leftString, setLeftString] = useState('') // for displaying Resultant character card 
   const[unique,setUnique] = useState(false) //for checking the string contain unique characters 
-  
+
   // Returns true if the input string s does not contain any duplicate characters.
   function hasUniqueChars(s) {
     let seen = new Set();
@@ -23,7 +22,7 @@ function Screen2({ inputString }) {
 
   useEffect(()=>{
     if(hasUniqueChars(result)){
-    //here set it has unique character 
+    //here set true it has unique character 
     setUnique(true);
     }
   },[result])
@@ -37,9 +36,12 @@ function Screen2({ inputString }) {
           newResult += result.charAt(i);
         }
       }
+      if(newResult!==result){
+        toast.success(`Successfully removed '${char}'`)
+      }else{
+        toast.info(`No duplicate of '${char}' found`)
+      }
       setResult(newResult)
-      setLeftString(newResult)
-      toast.success(`Successfully removed '${char}'`)
     } catch (error) {
       console.log(error)
     }
@@ -67,16 +69,8 @@ function Screen2({ inputString }) {
          <p>Resultant string: <span className='text-green-500'>{result}</span></p>
         </div>
         <div className='px-3 lg:px-5 flex flex-wrap '>
-          {[...inputString]?.map((char, i) => {
+          {[...result]?.map((char, i) => {
             return <CharacterComp character={char} key={i} index={i} handleDeleteCharacter={handleDeleteCharacter} />
-          })}
-        </div>
-        <div>
-          <h1 className='text-lg md:text-2xl text-center '>New Resultant String will show below</h1>
-        </div>
-        <div className='flex flex-wrap px-3 lg:px-5'>
-          {[...leftString]?.map((char, i) => {
-            return <div key={i} className="bg-green-500 m-1 w-20 flex justify-center rounded"> <h1 className='text-white text-5xl font-mono pb-2'>{char}</h1></div>
           })}
         </div>
         <div className='flex justify-center p-2'>
